@@ -11,6 +11,7 @@ module.exports = {
           date: new Date('2022-09-02T19:58:00.000Z'),
           status: 'À vista',
           methodPayment: 'Dinheiro',
+          statusPayment: false,
         },
         {
           id: 2,
@@ -21,6 +22,7 @@ module.exports = {
           date: new Date('2022-09-02T19:58:00.000Z'),
           status: 'À vista',
           methodPayment: 'Débito',
+          statusPayment: false,
         },
         {
           id: 3,
@@ -31,6 +33,7 @@ module.exports = {
           date: new Date('2022-09-02T19:58:00.000Z'),
           status: 'Parcelado',
           methodPayment: 'Crédito',
+          statusPayment: false,
         },
       ], { timestamps: false });
   },

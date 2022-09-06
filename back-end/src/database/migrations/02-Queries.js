@@ -41,6 +41,10 @@ module.exports = {
       methodPayment: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      statusPayment: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
       }
     });
   },

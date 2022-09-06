@@ -34,6 +34,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    statusPayment: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
   }, {
     timestamps: false,
     tableName: 'queries',
