@@ -6,6 +6,11 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true
       },
+      userId: {
+        type: DataTypes.INTEGER,
+        foreignKey: true,
+        allowNull: false
+      },
       queryId: {
         type: DataTypes.INTEGER,
         foreignKey: true,
@@ -32,6 +37,8 @@ module.exports = (sequelize, DataTypes) => {
   PaymentInstallment.associate = (models) => {
     PaymentInstallment.belongsTo(models.Query,
       { foreignKey: 'queryId', as: 'installmentsQuery' });
+    PaymentInstallment.belongsTo(models.Query,
+      { foreignKey: 'userId', as: 'installmentsUser' });
   };
 
   return PaymentInstallment;
