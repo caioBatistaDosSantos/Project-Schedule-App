@@ -36,7 +36,7 @@ services:
       - MYSQL_PASSWORD=123456
       - HOSTNAME=db
       - MYSQL_PORT=3306
-      - MYSQL_DB_NAME=delivery-app
+      - MYSQL_DB_NAME=schedule-app
       - EVAL_ALWAYS_RESTORE_DEV_DB=true
       - NODE_ENV=development
     healthcheck:
