@@ -34,17 +34,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      status: {
+      optionPayment: {
         allowNull: false,
         type: Sequelize.STRING
       },
       methodPayment: {
         allowNull: false,
         type: Sequelize.STRING
-      },
-      statusPayment: {
-        allowNull: false,
-        type: Sequelize.BOOLEAN,
       }
     });
   },

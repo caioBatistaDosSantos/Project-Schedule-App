@@ -26,16 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    status: {
+    optionPayment: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     methodPayment: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    statusPayment: {
-      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   }, {
