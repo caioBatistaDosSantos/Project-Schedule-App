@@ -8,7 +8,7 @@ const { Query } = require('../database/models');
 const queriesService = require('../services/queriesService');
 const jwt = require('jsonwebtoken');
 
-const { QUERIES_MATCHER, TOKEN_MATCHER, DECODE_MATCHER, NEW_QUERIE_MATCHER } = require('./utilForTests');
+const { QUERIES_MATCHER, DECODE_MATCHER, NEW_QUERIE_MATCHER } = require('./utilForTests');
 
 chai.use(chaiHttp);
 
