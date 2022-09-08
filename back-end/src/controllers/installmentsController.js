@@ -24,9 +24,9 @@ const getPaymentInstallmentsByDate = async (req, res, next) => {
     const { data: { id } } = req.user;
     const { date } = req.params;
 
-    if (!id || !date) {
+    if (!date) {
       return res.status(StatusCodes.BAD_REQUEST).json({
-        message: 'Enter a valid id and date',
+        message: 'Enter a valid date',
       });
     }
 
