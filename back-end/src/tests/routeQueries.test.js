@@ -10,8 +10,6 @@ const jwt = require('jsonwebtoken');
 
 const { QUERIES_MATCHER, TOKEN_MATCHER, DECODE_MATCHER, NEW_QUERIE_MATCHER } = require('./utilForTests');
 
-const { Response } = require('superagent');
-
 chai.use(chaiHttp);
 
 const { expect } = chai;

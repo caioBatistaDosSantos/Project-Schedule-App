@@ -9,8 +9,6 @@ const JWT = require('../utils/generateJWT');
 
 const { CREATE_USER_MATCHER, REGISTER_MATCHER, TOKEN_MATCHER } = require('./utilForTests');
 
-const { Response } = require('superagent');
-
 chai.use(chaiHttp);
 
 const { expect } = chai;
