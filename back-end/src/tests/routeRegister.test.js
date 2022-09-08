@@ -6,7 +6,6 @@ const { StatusCodes } = require('http-status-codes');
 const app = require('../api/server');
 const { User } = require('../database/models');
 const JWT = require('../utils/generateJWT');
-const md5 = require('../utils/hashMD5');
 
 const { CREATE_USER_MATCHER, REGISTER_MATCHER, TOKEN_MATCHER } = require('./utilForTests');
 
