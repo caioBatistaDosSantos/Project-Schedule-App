@@ -1,9 +1,8 @@
 const jwt = require('jsonwebtoken');
 const { StatusCodes } = require('http-status-codes');
 
-const key = process.env.JWT_SECRET;
-
-const secretKey = key || 'secret_key';
+// test: sercret key for tests
+const secretKey = process.env.JWT_SECRET || 'secret_key';
 
 const jwtConfig = {
   expiresIn: '180m',

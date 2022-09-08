@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
-const key = process.env.JWT_SECRET;
+// test: sercret key for tests
+const key = process.env.JWT_SECRET || 'secretKey';
 
 const jwtConfig = {
   expiresIn: '180m',
@@ -13,4 +14,4 @@ const generateJWT = (payload) => {
   return token;
 };
 
-module.exports = generateJWT; 
+module.exports = { generateJWT }; 
