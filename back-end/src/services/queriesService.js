@@ -13,7 +13,7 @@ const getQueriesByUser = async (id) => {
 };
 
 const deleteQueriesByUser = async (id) => {
-  await Query.destroy({ where: { userId: id } });
+  await Query.destroy({ where: { id } });
 };
 
 const createQueries = async (params) => {
