@@ -17,7 +17,8 @@ const validateToken = async (req, res, next) => {
       return res.status(StatusCodes.NOT_FOUND).json({ message: 'Token not found' });
     }
 
-    const decoded = jwt.verify(token, secretKey, jwtConfig);
+    // test: await needed for method "stub"
+    const decoded = await jwt.verify(token, secretKey, jwtConfig);
 
     req.user = decoded;
 
