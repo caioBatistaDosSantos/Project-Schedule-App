@@ -10,6 +10,8 @@ const md5 = require('../utils/hashMD5');
 
 const { USER_MATCHER, LOGIN_MATCHER, TOKEN_MATCHER } = require('./utilForTests');
 
+const { Response } = require('superagent');
+
 chai.use(chaiHttp);
 
 const { expect } = chai;

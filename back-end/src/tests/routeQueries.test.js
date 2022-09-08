@@ -10,6 +10,8 @@ const jwt = require('jsonwebtoken');
 
 const { QUERIES_MATCHER, DECODE_MATCHER, NEW_QUERIE_MATCHER } = require('./utilForTests');
 
+const { Response } = require('superagent');
+
 chai.use(chaiHttp);
 
 const { expect } = chai;
@@ -106,7 +108,7 @@ describe('Teste a rota POST "/queries"', () => {
 });
 
 describe('Teste a rota DELETE "/queries/:id"', () => {
-  it.only('Caso de sucesso:', async () => {
+  it('Caso de sucesso:', async () => {
     sinon
       .stub(Query, "destroy")
       .resolves(null);
