@@ -67,6 +67,76 @@ const	NEW_QUERIE_MATCHER = {
 
 const DECODE_MATCHER = { data: { id: 1 } };
 
+const INSTALLMENTS_MATCHER = [
+	{
+		"id": 3,
+		"userId": 1,
+		"queryId": 3,
+		"installmentsPrice": "1000.00",
+		"date": "2022-10-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 4,
+		"userId": 1,
+		"queryId": 3,
+		"installmentsPrice": "1000.00",
+		"date": "2022-11-02T19:58:00.000Z",
+		"status": false
+	},
+];
+
+const INSTALLMENTS_MATCHER_BY_DATE = [
+	{
+		"id": 1,
+		"userId": 1,
+		"queryId": 1,
+		"installmentsPrice": "150.00",
+		"date": "2022-10-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 2,
+		"userId": 1,
+		"queryId": 2,
+		"installmentsPrice": "1500.00",
+		"date": "2022-10-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 3,
+		"userId": 1,
+		"queryId": 3,
+		"installmentsPrice": "1000.00",
+		"date": "2022-10-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 4,
+		"userId": 1,
+		"queryId": 3,
+		"installmentsPrice": "1000.00",
+		"date": "2022-11-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 6,
+		"userId": 1,
+		"queryId": 6,
+		"installmentsPrice": "1000.00",
+		"date": "2022-10-02T19:58:00.000Z",
+		"status": false
+	},
+	{
+		"id": 7,
+		"userId": 1,
+		"queryId": 6,
+		"installmentsPrice": "1000.00",
+		"date": "2022-11-02T19:58:00.000Z",
+		"status": false
+	}
+];
+
 module.exports = {
   LOGIN_MATCHER,
   TOKEN_MATCHER,
@@ -76,4 +146,6 @@ module.exports = {
 	QUERIES_MATCHER,
 	DECODE_MATCHER,
 	NEW_QUERIE_MATCHER,
+	INSTALLMENTS_MATCHER,
+	INSTALLMENTS_MATCHER_BY_DATE,
 }
