@@ -22,9 +22,7 @@ const getPaymentInstallmentsByDate = async (id, date) => {
 };
 
 const updatePaymentInstallments = async (id, status) => {
-  const updatedStatus = await PaymentInstallment.update({ status }, { where: { id } });
-
-  return updatedStatus;
+  await PaymentInstallment.update({ status }, { where: { id } });
 };
 
 module.exports = {
