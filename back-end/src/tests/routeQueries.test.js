@@ -106,3 +106,24 @@ describe('Teste a rota POST "/queries"', () => {
     jwt.verify.restore();
   });
 });
+
+describe('Teste a rota DELETE "/queries/:id"', () => {
+  it.only('Caso de sucesso:', async () => {
+    sinon
+      .stub(Query, "destroy")
+      .resolves(null);
+
+    sinon
+      .stub(jwt, "verify")
+      .resolves(DECODE_MATCHER);
+
+    const response = await chai.request(app).delete('/queries/1')
+      .set('authorization', 'token');
+
+    expect(response.status).to.be.equal(StatusCodes.OK);
+    expect(response.body).to.be.eql({ message: 'Query deleted successfully' })
+
+    Query.destroy.restore();
+    jwt.verify.restore();
+  });
+});
