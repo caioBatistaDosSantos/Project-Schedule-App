@@ -17,12 +17,13 @@ const validateEmailAndPass = (req, res, next) => {
   const { email, password } = req.body;
 
   const { error } = BODY.validate({ password, email });
-  const validateEmail = email.includes('@' && '.com');
 
   if (error) {
     return res.status(StatusCodes.BAD_REQUEST).json({ message: error.message });
   }
 
+  const validateEmail = email.includes('@' && '.com');
+  
   if (!validateEmail) {
     return res.status(StatusCodes.BAD_REQUEST).json({ message: '"email" must be a valid email' });
   }
