@@ -1,16 +1,17 @@
 const { StatusCodes } = require('http-status-codes');
 const { User } = require('../database/models');
 const objectError = require('../utils/objectError');
-const { validateMD5, generateMD5 } = require('../utils/hashMD5');
+const md5 = require('../utils/hashMD5');
 
 const loginUser = async (email, password) => {
   const user = await User.findOne({ where: { email } });
 
-  if (!user) throw objectError(StatusCodes.NOT_FOUND, 'Email or password incorrect');
+  if (!user) throw objectError(StatusCodes.UNAUTHORIZED, 'Email or password incorrect');
 
-  const isValid = validateMD5(password, user.dataValues.password);
+  // test: await needed for method "stub"
+  const isValid = await md5.validateMD5(password, user.dataValues.password);
 
-  if (!isValid) throw objectError(StatusCodes.NOT_FOUND, 'Email or password incorrect');
+  if (!isValid) throw objectError(StatusCodes.UNAUTHORIZED, 'Email or password incorrect');
 
   return user;
 };
@@ -21,7 +22,8 @@ const createUser = async (name, email, password) => {
 
   if (verifyEmail || verifyName) throw objectError(StatusCodes.CONFLICT, 'User already registered');
 
-  const newPassword = generateMD5(password);
+  // test: await needed for method "stub"
+  const newPassword = await md5.generateMD5(password);
 
   const user = await User.create({ name, email, password: newPassword });
 

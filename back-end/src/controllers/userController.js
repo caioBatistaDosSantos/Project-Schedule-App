@@ -1,7 +1,7 @@
 const { StatusCodes } = require('http-status-codes');
 const userService = require('../services/userService');
 
-const generateJWT = require('../utils/generateJWT');
+const JWT = require('../utils/generateJWT');
 
 const loginUser = async (req, res, next) => {
   try {
@@ -10,7 +10,9 @@ const loginUser = async (req, res, next) => {
     const User = await userService.loginUser(email, password);
 
     const { password: passDB, ...userWithoutPass } = User.dataValues;
-    const token = generateJWT(userWithoutPass);
+
+    // test: await needed for method "stub"
+    const token = await JWT.generateJWT(userWithoutPass);
 
     return res.status(StatusCodes.OK).json({ ...userWithoutPass, token });
   } catch (error) {
@@ -24,7 +26,9 @@ const createUser = async (req, res, next) => {
 
     const User = await userService.createUser(name, email, password);
     const { password: passDB, ...userWithoutPass } = User.dataValues;
-    const token = generateJWT(userWithoutPass);
+
+    // test: await needed for method "stub"
+    const token = await JWT.generateJWT(userWithoutPass);
 
     return res.status(StatusCodes.CREATED).json({ ...userWithoutPass, token });
   } catch (error) {

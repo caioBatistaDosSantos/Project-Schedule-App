@@ -7,7 +7,7 @@ const getQueriesByUser = async (req, res, next) => {
 
     const queries = await queriesService.getQueriesByUser(id);
 
-    return res.status(StatusCodes.OK).json({ queries });
+    return res.status(StatusCodes.OK).json(queries);
   } catch (error) {
     console.log(error);
     next(error);

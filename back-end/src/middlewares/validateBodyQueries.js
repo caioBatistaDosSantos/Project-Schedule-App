@@ -37,16 +37,6 @@ const BODY = Joi.object({
 });
 
 const validateEmailAndPass = (req, res, next) => {
-  // const {
-  //   patientsName,
-  //   descripition,
-  //   totalPrice,
-  //   optionPayment,
-  //   methodPayment,
-  //   installmentsPrice,
-  //   dates,
-  // } = req.body;
-
   const { error } = BODY.validate(req.body);
 
   if (error) {
