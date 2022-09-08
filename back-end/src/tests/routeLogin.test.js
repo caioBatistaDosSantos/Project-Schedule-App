@@ -83,7 +83,7 @@ describe('Teste a rota POST "/login"', () => {
 });
 
 describe('Quando o login não acontece:', () => {
-  it('com o "email" não existe', async () => {
+  it('com o "email" não existente', async () => {
     sinon
       .stub(User, "findOne")
       .resolves(null);
