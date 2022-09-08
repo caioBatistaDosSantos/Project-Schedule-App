@@ -9,7 +9,7 @@ module.exports = {
           descripition: 'Consulta',
           totalPrice: 150,
           date: new Date('2022-09-02T19:58:00.000Z'),
-          status: 'À vista',
+          optionPayment: 'À vista',
           methodPayment: 'Dinheiro',
         },
         {
@@ -19,7 +19,7 @@ module.exports = {
           descripition: 'extração de siso',
           totalPrice: 1500,
           date: new Date('2022-09-02T19:58:00.000Z'),
-          status: 'À vista',
+          optionPayment: 'À vista',
           methodPayment: 'Débito',
         },
         {
@@ -29,7 +29,7 @@ module.exports = {
           descripition: 'gengivectomia',
           totalPrice: 3000,
           date: new Date('2022-09-02T19:58:00.000Z'),
-          status: 'Parcelado',
+          optionPayment: 'Parcelado',
           methodPayment: 'Crédito',
         },
       ], { timestamps: false });

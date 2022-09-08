@@ -1,14 +1,14 @@
 const express = require('express');
 const cors = require('cors'); 
-// const router = require('../routes/index');
-// const error = require('../middlewares/ErrorMiddleware');
+const router = require('../routes/index');
+const error = require('../middlewares/ErrorMiddleware');
 
 const app = express();
 
-// app.use('/images', express.static('public'));
 app.use(cors());
 app.use(express.json());
-// app.use(router);
-// app.use(error);
+
+app.use(router);
+app.use(error);
 
 module.exports = app;
