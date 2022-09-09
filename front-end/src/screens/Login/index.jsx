@@ -1,7 +1,8 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { POST, SET_TOKEN } from '../../utils/requestApi';
+import { GET, POST, SET_TOKEN } from '../../utils/requestApi';
 import { SIX, EMAIL_REGEX } from '../../utils/conts';
+import getLocalStorage from '../../utils/localStorage';
 import ErrorDiv from '../../components/ErrorDiv';
 
 export default function Login() {
@@ -10,8 +11,24 @@ export default function Login() {
   const [disabled, setDisabled] = useState(true);
   const [errorDiv, setErrorDiv] = useState(false);
 
+  const validateLogged = async () => {
+    try {
+      const USER = getLocalStorage('user');
+
+      if (!USER) return;
+
+      await GET('/logged', {
+        headers: { Authorization: USER.token },
+      });
+
+      window.location.href = '/home';
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   useEffect(() => {
-    localStorage.removeItem('user');
+    validateLogged();
   }, []);
 
   useEffect(() => {
