@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { GET, POST, SET_TOKEN } from '../../utils/requestApi';
 import { SIX, EMAIL_REGEX } from '../../utils/conts';
-import getLocalStorage from '../../utils/localStorage';
+import { getLocalStorage, logout, redirectRoute } from '../../utils/functions';
 import ErrorDiv from '../../components/ErrorDiv';
 
 export default function Login() {
@@ -21,9 +20,10 @@ export default function Login() {
         headers: { Authorization: USER.token },
       });
 
-      window.location.href = '/home';
+      redirectRoute('/home');
     } catch (error) {
       console.log(error.message);
+      logout();
     }
   };
 
@@ -52,7 +52,7 @@ export default function Login() {
       localStorage.setItem('token', result.token);
       localStorage.setItem('user', JSON.stringify(result));
 
-      window.location.href = '/home';
+      redirectRoute('/home');
     } catch (error) {
       console.log(error);
       setErrorDiv(true);
@@ -90,24 +90,20 @@ export default function Login() {
           />
         )}
         <button
-          type="button"
+          type="submit"
           data-testid="common_login__button-login"
           disabled={ disabled }
           onClick={ (event) => handleClick(event) }
         >
           LOGIN
         </button>
-
-        <Link
-          to="/register"
+        <button
+          type="button"
+          data-testid="common_login__button-register"
+          onClick={ () => redirectRoute('/register') }
         >
-          <button
-            type="submit"
-            data-testid="common_login__button-register"
-          >
-            CRIAR UMA CONTA
-          </button>
-        </Link>
+          CRIAR UMA CONTA
+        </button>
       </form>
     </section>
   );

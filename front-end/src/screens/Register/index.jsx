@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { EMAIL_REGEX, SIX, TWELVE } from '../../utils/conts';
 import { POST, SET_TOKEN } from '../../utils/requestApi';
 import ErrorDiv from '../../components/ErrorDiv';
+import { redirectRoute } from '../../utils/functions';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -32,7 +33,7 @@ export default function Register() {
       localStorage.setItem('user', JSON.stringify(result));
       localStorage.setItem('token', result.token);
 
-      window.location.href = '/home';
+      redirectRoute('/home');
     } catch (error) {
       console.log(error);
       setErrorDiv(true);
