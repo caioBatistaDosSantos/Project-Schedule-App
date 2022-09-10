@@ -13,13 +13,13 @@ export const GET = async (endpoint, body) => {
   return data;
 };
 
-export const POST = async (endpoint, body) => {
-  const { data } = await api.post(endpoint, body);
+export const POST = async (endpoint, body, header) => {
+  const { data } = await api.post(endpoint, body, header);
   return data;
 };
 
-export const PUT = async (endpoint, body) => {
-  const { data } = await api.put(endpoint, body);
+export const PUT = async (endpoint, body, header) => {
+  const { data } = await api.put(endpoint, body, header);
   return data;
 };
 
