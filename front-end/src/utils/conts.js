@@ -8,3 +8,5 @@ export const BTNS_NAV_BAR = [
   { nameBtn: 'Cadastrar nova consulta', routeBtn: 'register-query' },
   { nameBtn: 'Gerenciamento financeiro', routeBtn: 'financial-management' },
 ];
+export const OPITION_PAYMENT = ['Dinheiro', 'Débito', 'Crédito'];
+export const METHOD_PAYMENT = ['À vista', 'Parcelado'];
