@@ -3,6 +3,7 @@ import Login from '../screens/Login';
 import Redirect from '../screens/Redirect';
 import Register from '../screens/Register';
 import Home from '../screens/Home';
+import RegisterQuery from '../screens/RegisterQuery';
 
 export default function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ export default function AppRoutes() {
       <Route path="/login" element={ <Login /> } />
       <Route path="/register" element={ <Register /> } />
       <Route path="/home" element={ <Home /> } />
+      <Route path="/register-query" element={ <RegisterQuery /> } />
     </Routes>
   );
 }
