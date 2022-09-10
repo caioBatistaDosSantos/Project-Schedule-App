@@ -21,6 +21,7 @@ export default function NavBar({ Route }) {
     } catch (error) {
       console.log(error.message);
       redirectRoute('/');
+      logout();
       alert(MESSAGE_TOKEN_EXPIRED);
     }
   };
