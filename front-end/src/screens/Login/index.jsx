@@ -22,7 +22,6 @@ export default function Login() {
 
       redirectRoute('/home');
     } catch (error) {
-      console.log(error.message);
       logout();
     }
   };
