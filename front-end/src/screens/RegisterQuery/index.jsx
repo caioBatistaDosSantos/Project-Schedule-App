@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { POST } from '../../utils/requestApi';
 import { SIX, OPITION_PAYMENT, METHOD_PAYMENT, TWELVE } from '../../utils/conts';
+import { createArrayOfNumbers } from '../../utils/functions';
 import NavBar from '../../components/NavBar';
 import ErrorDiv from '../../components/ErrorDiv';
 
@@ -158,11 +159,7 @@ export default function RegisterQuery() {
   );
 
   const numberInstallments = () => {
-    const NUMBERS_INSTALLMENTS = [];
-
-    for (let i = 1; i <= TWELVE; i += 1) {
-      NUMBERS_INSTALLMENTS.push(i);
-    }
+    const NUMBERS_INSTALLMENTS = createArrayOfNumbers(1, TWELVE);
 
     return NUMBERS_INSTALLMENTS.map((e) => (
       <option
@@ -237,7 +234,7 @@ export default function RegisterQuery() {
           )}
         <button
           type="button"
-          data-testid="common_login__button-login"
+          data-testid="button-register-query"
           disabled={ disabled }
           onClick={ () => installmentsDates() }
         >

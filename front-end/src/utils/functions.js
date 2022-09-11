@@ -12,3 +12,13 @@ export const logout = () => {
 export const redirectRoute = (route) => {
   window.location.href = route;
 };
+
+export const createArrayOfNumbers = (minNumbers, maxNumbers) => {
+  const NUMBERS = [];
+
+  for (let i = minNumbers; i <= maxNumbers; i += 1) {
+    NUMBERS.push(i);
+  }
+
+  return NUMBERS;
+};
