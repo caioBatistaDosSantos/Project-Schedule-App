@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { GET } from '../../utils/requestApi';
 import { createArrayOfNumbers } from '../../utils/functions';
 import { TWELVE } from '../../utils/conts';
+import Header from '../../components/Header';
 import NavBar from '../../components/NavBar';
 import FinancialDatas from '../../components/FinancialDatas';
 
@@ -50,7 +51,7 @@ export default function FinancialManagement() {
 
   return (
     <>
-      <NavBar Route="financial-management" />
+      <Header />
       <h3>Financial Management</h3>
       <main>
         <label htmlFor="select-number-month">
@@ -82,6 +83,7 @@ export default function FinancialManagement() {
           )
         }
       </main>
+      <NavBar Route="financial-management" />
     </>
   );
 }

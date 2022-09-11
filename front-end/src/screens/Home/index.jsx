@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { GET, DELETE } from '../../utils/requestApi';
+import Header from '../../components/Header';
 import NavBar from '../../components/NavBar';
 import CardQueries from '../../components/CardQueries';
 
@@ -37,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar Route="home" />
+      <Header />
       <h3>Home</h3>
       <main>
         <span><i>Consultas cadastradas</i></span>
@@ -58,6 +59,7 @@ export default function Home() {
             ))
         }
       </main>
+      <NavBar Route="home" />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { POST } from '../../utils/requestApi';
 import { SIX, OPITION_PAYMENT, METHOD_PAYMENT, TWELVE } from '../../utils/conts';
 import { createArrayOfNumbers } from '../../utils/functions';
 import NavBar from '../../components/NavBar';
+import Header from '../../components/Header';
 import ErrorDiv from '../../components/ErrorDiv';
 
 export default function RegisterQuery() {
@@ -173,7 +174,7 @@ export default function RegisterQuery() {
 
   return (
     <section>
-      <NavBar Route="register-query" />
+      <Header />
       <h3>Register Query</h3>
       <form>
         {errorDiv && (
@@ -241,6 +242,7 @@ export default function RegisterQuery() {
           Criar a Consulta
         </button>
       </form>
+      <NavBar Route="register-query" />
     </section>
   );
 }
