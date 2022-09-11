@@ -1,4 +1,5 @@
 const express = require('express');
+const { StatusCodes } = require('http-status-codes');
 
 const validateEmailAndPass = require('../middlewares/validateEmailAndPass');
 const validateName = require('../middlewares/validateName');
@@ -10,6 +11,8 @@ const installmentsController = require('../controllers/installmentsController');
 const queriesController = require('../controllers/queriesController');
 
 const router = express.Router();
+
+router.get('/logged', validateJWT, (_req, res) => res.status(StatusCodes.OK).send());
 
 router.post('/login', validateEmailAndPass, userController.loginUser);
 router.post('/register', validateEmailAndPass, validateName, userController.createUser);
