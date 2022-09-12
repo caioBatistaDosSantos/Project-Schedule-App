@@ -28,7 +28,6 @@ export default function Header({ Route }) {
     }
   };
 
-  console.log(user);
   useEffect(() => {
     getUser();
   }, []);
