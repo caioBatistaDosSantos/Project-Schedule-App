@@ -1,0 +1,42 @@
+.container-home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-home span {
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.container-query {
+  align-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5px auto;
+  width: 90%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(145, 93, 93, 0.24) 0 3px 8px;
+}
+
+.btn-query {
+  width: 100%;
+  justify-content: flex-end;
+  border: none;
+  background-color: #00d76b;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  opacity: 90%;
+}
+
+.btn-query:target {
+  background-color: rgba(244, 100, 100, 0.94);
+  border-color: white;
+  color: white;
+}
+
+.btn-query-icon {
+  height: 25px;
+  width: 25px;
+}
