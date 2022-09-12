@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { GET } from '../utils/requestApi';
 import Installments from './Installments';
+import '../assets/CardQueries.css';
 
 export default function CardQueries({
   id,
@@ -35,46 +36,52 @@ export default function CardQueries({
   };
 
   return (
-    <div key={ `card-queires-${id}` }>
+    <div
+      key={ `card-queires-${id}` }
+      className="container-card-queries"
+    >
       <button
         type="button"
-        data-testid="button-card-details-queries"
+        className="btn-card-queries"
         onClick={ () => btnDetails() }
       >
-        <section data-testid={ `section-card-${patientsName}` }>
+        <section className="section-name">
           <b>{patientsName}</b>
         </section>
         <section data-testid={ `section-card-${date}` }>
           {new Date(date).toLocaleDateString('pt-BR')}
         </section>
-        <span><i>Clique para mais detalhes</i></span>
+        <section>
+          <span><i>Clique para mais detalhes</i></span>
+        </section>
       </button>
       {
         installments.length !== 0
           && (
-            <div>
-              <span><i>Descrição: </i></span>
-              <section data-testid={ `section-card-${descripition}` }>
-                {descripition}
-              </section>
-              <section data-testid="section-card-price">
+            <div className="container-details">
+              <section className="section-details">
+                {`Descrição: ${descripition}`}
                 <p>
-                  {`Total: R$${totalPrice.replace(/\./, ',')}
-                  Opção de pagamento: ${methodPayment} - ${optionPayment}`}
+                  {`Total: R$${totalPrice.replace(/\./, ',')}`}
+                </p>
+                <p>
+                  {`Opção de pagamento: ${methodPayment} - ${optionPayment}`}
                 </p>
               </section>
-              {
-                installments.map((e, i) => (
-                  <Installments
-                    key={ e.id }
-                    id={ e.id }
-                    installmentsPrice={ e.installmentsPrice }
-                    date={ e.date }
-                    status={ e.status }
-                    index={ i }
-                  />
-                ))
-              }
+              <section className="section-installments">
+                {
+                  installments.map((e, i) => (
+                    <Installments
+                      key={ e.id }
+                      id={ e.id }
+                      installmentsPrice={ e.installmentsPrice }
+                      date={ e.date }
+                      status={ e.status }
+                      index={ i }
+                    />
+                  ))
+                }
+              </section>
             </div>
           )
       }
