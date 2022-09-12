@@ -36,11 +36,6 @@ export default function Header({ Route }) {
   return (
     <header className="container-header">
       <div className="header-search-title-profile">
-        {/* <div className="container-title">
-          <h4 data-testid="element-navbar-user-name">
-            {user.name}
-          </h4>
-        </div> */}
         <img
           alt="logo-app"
           className="btn-logo"
