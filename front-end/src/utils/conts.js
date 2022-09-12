@@ -5,8 +5,8 @@ export const MESSAGE_TOKEN_EXPIRED = `Token expirado ou não encontrado!
 Por favor realize o login novamente`;
 export const BTNS_NAV_BAR = [
   { nameBtn: 'Home', routeBtn: 'home' },
-  { nameBtn: 'Cadastrar nova consulta', routeBtn: 'register-query' },
-  { nameBtn: 'Gerenciamento financeiro', routeBtn: 'financial-management' },
+  { nameBtn: 'Nova Operação', routeBtn: 'register-query' },
+  { nameBtn: 'Financeiro', routeBtn: 'financial-management' },
 ];
 export const OPITION_PAYMENT = ['Dinheiro', 'Débito', 'Crédito'];
 export const METHOD_PAYMENT = ['À vista', 'Parcelado'];
