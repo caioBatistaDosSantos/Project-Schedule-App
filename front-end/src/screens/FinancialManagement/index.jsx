@@ -3,7 +3,7 @@ import { GET } from '../../utils/requestApi';
 import { createArrayOfNumbers } from '../../utils/functions';
 import { TWELVE } from '../../utils/conts';
 import Header from '../../components/Header';
-import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 import FinancialDatas from '../../components/FinancialDatas';
 
 export default function FinancialManagement() {
@@ -82,7 +82,7 @@ export default function FinancialManagement() {
           )
         }
       </main>
-      <NavBar Route="financial-management" />
+      <Footer Route="financial-management" />
     </>
   );
 }
