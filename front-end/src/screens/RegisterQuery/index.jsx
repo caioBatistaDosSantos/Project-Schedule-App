@@ -174,8 +174,7 @@ export default function RegisterQuery() {
 
   return (
     <section>
-      <Header />
-      <h3>Register Query</h3>
+      <Header Route="Nova operação" />
       <form>
         {errorDiv && (
           <ErrorDiv

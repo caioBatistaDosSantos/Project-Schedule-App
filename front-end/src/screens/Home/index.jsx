@@ -38,8 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <h3>Home</h3>
+      <Header Route="Home" />
       <main>
         <span><i>Consultas cadastradas</i></span>
         {

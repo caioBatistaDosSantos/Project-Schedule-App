@@ -51,8 +51,7 @@ export default function FinancialManagement() {
 
   return (
     <>
-      <Header />
-      <h3>Financial Management</h3>
+      <Header Route="Financeiro" />
       <main>
         <label htmlFor="select-number-month">
           Informe a quantidade de mêses que deseja realizar a pesquisa:
