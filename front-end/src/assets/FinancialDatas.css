@@ -1,0 +1,11 @@
+.section-datas {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.section-datas p {
+  padding: 5px;
+  font-size: 15px;
+  /* text-align: center; */
+}
