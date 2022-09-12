@@ -61,8 +61,6 @@ export default function RegisterQuery() {
   }, [methodPayment, installments, totalPrice, totalPriceOrigin]);
 
   const cleaningEntries = () => {
-    setPatientsName('');
-    setDescripition('');
     setTotalPriceOrigin(0);
     setTotalPrice(0);
     setOptionPayment(OPITION_PAYMENT[0]);
@@ -186,8 +184,12 @@ export default function RegisterQuery() {
             message="Erro ao tentar cadastrar a operação, tente novamente mais tarde"
           />
         )}
-        { createInputText('patientsName', 'Nome do paciente:', setPatientsName) }
-        { createInputText('descripition', 'Descrição do procedimento:', setDescripition) }
+        { createInputText('patientsName', 'Nome do paciente (min 6):', setPatientsName) }
+        { createInputText(
+          'descripition',
+          'Descrição do procedimento (min 6):',
+          setDescripition,
+        ) }
         <div className="container-input">
           <label htmlFor="imput-total-price">
             Valor Total do procedimento:
