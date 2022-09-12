@@ -1,0 +1,10 @@
+.conteiner-installments {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.installments {
+  width: 100%;
+  font-size: 15px;
+}

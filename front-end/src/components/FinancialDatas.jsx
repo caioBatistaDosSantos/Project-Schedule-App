@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../assets/FinancialDatas.css';
 
 export default function FinancialDatas({ data }) {
   const countQueryIds = () => {
@@ -40,7 +41,7 @@ export default function FinancialDatas({ data }) {
   }
 
   return (
-    <section>
+    <section className="section-datas">
       <p>{`Total de consultas cadastradas até esta data: ${countQueryIds()}`}</p>
       <p>{`Total de parcelas cadastradas até esta data: ${data.length}`}</p>
       <p>{`Valor total das parcelas: R$${countTotalPrice()}`}</p>

@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
+import { MdOutlineDeleteForever } from 'react-icons/md';
 import { GET, DELETE } from '../../utils/requestApi';
-import NavBar from '../../components/NavBar';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import CardQueries from '../../components/CardQueries';
+import './styles.css';
 
 export default function Home() {
   const [queries, setQueries] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getQueries = async () => {
     try {
@@ -13,8 +17,10 @@ export default function Home() {
       const QUERIES = await GET('/queries', { headers: { authorization: TOKEN } });
 
       setQueries(QUERIES);
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -35,29 +41,35 @@ export default function Home() {
     }
   };
 
+  if (loading) return <span><i>Carregando...</i></span>;
+
   return (
     <>
-      <NavBar Route="home" />
-      <h3>Home</h3>
-      <main>
-        <span><i>Consultas cadastradas</i></span>
+      <Header Route="Home" />
+      <main className="container-home">
+        <span><i>Consultas cadastradas...</i></span>
         {
           queries.length === 0
             ? <h4><i>Ainda não há nenhuma consulta cadastrada</i></h4>
             : queries.map((e) => (
-              <div key={ e.id }>
+              <div
+                key={ e.id }
+                className="container-query"
+              >
                 <CardQueries { ...e } />
                 <button
                   type="button"
                   data-testid="button-remove-querie"
                   onClick={ () => btnRemove(e.id) }
+                  className="btn-query"
                 >
-                  Excluir
+                  <MdOutlineDeleteForever className="btn-query-icon" />
                 </button>
               </div>
             ))
         }
       </main>
+      <Footer Route="home" />
     </>
   );
 }

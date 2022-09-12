@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { PUT } from '../utils/requestApi';
+import '../assets/Installments.css';
 
 export default function Installments({
   id,
@@ -33,15 +34,20 @@ export default function Installments({
   };
 
   return (
-    <label htmlFor={ index }>
-      {`${INDEX}x - R$${PRICE} - ${DATE} - ${STATUS}`}
-      <input
-        type="checkbox"
-        id={ index }
-        defaultChecked={ status }
-        onClick={ () => checkInstallments() }
-      />
-    </label>
+    <div className="cconteiner-installments">
+      <label
+        htmlFor={ index }
+        className="installments"
+      >
+        {`${INDEX}x - R$${PRICE} - ${DATE} - ${STATUS} `}
+        <input
+          type="checkbox"
+          id={ index }
+          defaultChecked={ status }
+          onClick={ () => checkInstallments() }
+        />
+      </label>
+    </div>
   );
 }
 
