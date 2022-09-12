@@ -1,0 +1,39 @@
+.container-card-queries {
+  width: 100%;
+}
+
+.btn-card-queries {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.495);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 3px 0;
+}
+
+.section-name {
+  font-size: 14px;
+}
+
+.container-details {
+  margin: 10px;
+  display: block;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.section-details {
+  background-color: rgba(245, 245, 245, 0.762);
+  padding: 5px;
+  border-style: groove;
+  border-radius: 5px;
+}
+
+.section-installments {
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+}
