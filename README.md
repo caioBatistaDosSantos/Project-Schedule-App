@@ -22,7 +22,7 @@ Este repositório contêm o `backend` e `frontend` da aplicação desenvolvidos 
 
   - Atentificação: Cria tokens com a ferramenta JWT e salva as senhas no banco de dados em hash md5.
 
-  - Banco de Dados (db): banco MySQL e para a gestão de dados utilzar a ORM Sequelize.
+  - Banco de Dados (db): banco MySQL e para a gestão de dados utilza a ORM Sequelize.
 
   - TESTES INTEGRADOS: os teste foram desenvolvidos com Jest, Mocha, Chai e Sinon.
 
@@ -30,14 +30,14 @@ Este repositório contêm o `backend` e `frontend` da aplicação desenvolvidos 
 
   - Aplicação: React.js, utilizando funções e React Hooks.
   - Gerenciamento do estado: React Context.
-  - Estilização para telas menores: CSS puro, seguindo o peincípio Mobile First (realizar a estilização primeiro para telas menores -m obile).
+  - Estilização para telas menores: CSS puro, seguindo o peincípio Mobile First (realizar a estilização primeiro para telas menores -> mobile).
   - Estilização para telas maiores: em produção.
   - TESTES: em produção.
 
 ### Outras tecnologias:
 
   - Dockerfile e docker-compose: para versionar e isolar o projeto, e facilitar a instancia do mesmo.
-  - Eslint: visando escritas de códigos mais limpos e de fácil manutenção.
+  - EsLint: visando escritas de códigos mais limpos e de fácil manutenção.
 
 ---
 
