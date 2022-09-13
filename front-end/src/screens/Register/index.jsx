@@ -56,7 +56,7 @@ export default function Register() {
         </div>
         <div className="container-email">
           <label htmlFor="name">
-            <p>Nome:</p>
+            <p>Nome Completo:</p>
             <input
               data-testid="common_register__input-name"
               type="text"
@@ -80,7 +80,7 @@ export default function Register() {
         </div>
         <div className="container-password">
           <label htmlFor="password-input">
-            <p>Senha:</p>
+            <p>Senha (min 6):</p>
             <input
               type="text"
               id="password-input"
