@@ -6,7 +6,7 @@ API e Aplicação de um cronograma desenvolvido com Node.js e React.js, com test
 
 ## O que foi desenvolvido:
 
-  - Esta aplicação surgiu para suprir a nescessidade de um dentista de gerir sua agenda de maneira que ele pudesse cadastrar um novo procedimento para um cliente, parcelar o valor e realizar uma busca dentre os procedimentos cadastrados assim gerindo seu financeiro.
+  - Esta aplicação surgiu para suprir a nescessidade de um dentista de gerir sua agenda de maneira que ele pudesse cadastrar um novo procedimento para um cliente, parcelar o valor e realizar uma busca dentre os procedimentos cadastrados assim gerenciando seu financeiro.
 
   - `IMPORTANTE`: a aplicação por hora não está responsiva, logo o css estará incorporado apenas para telas menores, de preferência celulares.
 
