@@ -63,6 +63,8 @@ Este repositório contêm o `backend` e `frontend` da aplicação desenvolvidos 
 
 - Apos o este passo a aplicação já vai estar rodando dentro do container docker e você pode testá-la na seguinte URL: `http://localhost:3000`.
 
+---
+
 # Feedback são bem-vindos!!
 
 - Se Possivel, deixe seu feedback ou seu code-review! Muito Obrigado! :)🤝🛠
